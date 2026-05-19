@@ -27,6 +27,7 @@ namespace ShadowDash.Player
         {
             body = GetComponent<Rigidbody2D>();
             input = GetComponent<PlayerKeyboardInput>();
+            body.interpolation = RigidbodyInterpolation2D.Interpolate;
 
             if (visualRoot == null)
             {

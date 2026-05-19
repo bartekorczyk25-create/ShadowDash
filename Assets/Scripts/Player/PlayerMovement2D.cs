@@ -20,6 +20,7 @@ namespace ShadowDash.Player
             input = GetComponent<PlayerKeyboardInput>();
             dash = GetComponent<PlayerDash2D>();
             body.gravityScale = 0f;
+            body.interpolation = RigidbodyInterpolation2D.Interpolate;
         }
 
         private void FixedUpdate()
