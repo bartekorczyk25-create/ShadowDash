@@ -35,10 +35,24 @@ namespace ShadowDash.Combat
             transform.position += (Vector3)(direction * speed * Time.deltaTime);
             lifeRemaining -= Time.deltaTime;
 
-            if (TryHitPlayer() || lifeRemaining <= 0f)
+            if (TryHitBlocker() || TryHitPlayer() || lifeRemaining <= 0f)
             {
                 Destroy(gameObject);
             }
+        }
+
+        private bool TryHitBlocker()
+        {
+            Collider2D[] hits = Physics2D.OverlapCircleAll(transform.position, hitRadius);
+            foreach (Collider2D hit in hits)
+            {
+                if (hit.TryGetComponent(out ProjectileBlocker _))
+                {
+                    return true;
+                }
+            }
+
+            return false;
         }
 
         private bool TryHitPlayer()
