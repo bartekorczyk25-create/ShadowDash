@@ -7,8 +7,8 @@ namespace ShadowDash.Gameplay
 {
     public sealed class RoomWaveManager : MonoBehaviour
     {
-        [SerializeField] private EnemyHealth enemyPrefab;
-        [SerializeField] private Transform[] spawnPoints;
+        [SerializeField] private EnemyHealth enemyPrefab = null;
+        [SerializeField] private Transform[] spawnPoints = new Transform[0];
         [SerializeField] private int enemiesPerWave = 5;
         [SerializeField] private float timeBetweenSpawns = 0.65f;
         [SerializeField] private float startDelay = 1f;

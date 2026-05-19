@@ -6,8 +6,8 @@ namespace ShadowDash.Enemies
 {
     public sealed class EnemyShooter : MonoBehaviour
     {
-        [SerializeField] private EnemyProjectile2D projectilePrefab;
-        [SerializeField] private Transform firePoint;
+        [SerializeField] private EnemyProjectile2D projectilePrefab = null;
+        [SerializeField] private Transform firePoint = null;
         [SerializeField] private float fireRate = 0.75f;
         [SerializeField] private float range = 7f;
         [SerializeField] private int projectileDamage = 1;

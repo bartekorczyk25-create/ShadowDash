@@ -6,8 +6,8 @@ namespace ShadowDash.Combat
     [RequireComponent(typeof(EnemyTargeting))]
     public sealed class PlayerAutoShooter : MonoBehaviour
     {
-        [SerializeField] private Projectile2D projectilePrefab;
-        [SerializeField] private Transform firePoint;
+        [SerializeField] private Projectile2D projectilePrefab = null;
+        [SerializeField] private Transform firePoint = null;
         [SerializeField] private float fireRate = 1.5f;
         [SerializeField] private float range = 8f;
         [SerializeField] private int projectileDamage = 1;
