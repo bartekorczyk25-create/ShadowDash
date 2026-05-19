@@ -156,6 +156,8 @@ MonoBehaviour:
   obstacleCheckDistance: 0.85
   steeringDuration: 0.45
   unstuckTime: 0.75
+  cornerRetryTime: 0.35
+  strongSteeringDuration: 0.7
   obstacleLayerMask:
     serializedVersion: 2
     m_Bits: 4294967295
