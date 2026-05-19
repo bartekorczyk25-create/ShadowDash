@@ -153,6 +153,12 @@ MonoBehaviour:
   target: {fileID: 0}
   moveSpeed: 2.2
   stopDistance: 0.75
+  obstacleCheckDistance: 0.85
+  steeringDuration: 0.45
+  unstuckTime: 0.75
+  obstacleLayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
 --- !u!114 &800008
 MonoBehaviour:
   m_ObjectHideFlags: 0
