@@ -230,6 +230,7 @@ GameObject:
   - component: {fileID: 200004}
   - component: {fileID: 200005}
   - component: {fileID: 200006}
+  - component: {fileID: 200008}
   - component: {fileID: 200007}
   m_Layer: 0
   m_Name: Player Placeholder
@@ -364,6 +365,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 7
+--- !u!114 &200008
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 200000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c9b154ee61843f39cc7b3aacb221ecb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dashSpeed: 18
+  dashDuration: 0.12
+  dashCooldown: 0.55
+  visualRoot: {fileID: 200001}
+  dashScale: {x: 1.2, y: 0.8, z: 1}
 --- !u!1 &300000
 GameObject:
   m_ObjectHideFlags: 0

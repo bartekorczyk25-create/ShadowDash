@@ -9,10 +9,12 @@ namespace ShadowDash.Input
     public sealed class PlayerKeyboardInput : MonoBehaviour
     {
         public Vector2 MoveDirection { get; private set; }
+        public bool DashPressed { get; private set; }
 
         private void Update()
         {
             Vector2 moveDirection = Vector2.zero;
+            DashPressed = false;
 
 #if ENABLE_INPUT_SYSTEM
             Keyboard keyboard = Keyboard.current;
@@ -41,6 +43,8 @@ namespace ShadowDash.Input
             {
                 moveDirection.y += 1f;
             }
+
+            DashPressed = keyboard.spaceKey.wasPressedThisFrame;
 #elif ENABLE_LEGACY_INPUT_MANAGER
             if (UnityEngine.Input.GetKey(KeyCode.A) || UnityEngine.Input.GetKey(KeyCode.LeftArrow))
             {
@@ -61,6 +65,8 @@ namespace ShadowDash.Input
             {
                 moveDirection.y += 1f;
             }
+
+            DashPressed = UnityEngine.Input.GetKeyDown(KeyCode.Space);
 #endif
             MoveDirection = Vector2.ClampMagnitude(moveDirection, 1f);
         }
